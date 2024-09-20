@@ -1,4 +1,4 @@
-class Character:
+
 """
     Represents a character in the game.
     
@@ -16,14 +16,16 @@ class Character:
         receive_item(item: Any) -> None:
             Adds the given item to the character's inventory.
     """
-        def __init__(self, name, health, inventory, dialogue):
+class Character:
+
+    def __init__(self, name, health, inventory, dialogue):
         self.name = name
         self.health = health
         self.inventory = inventory
         self.dialogue = dialogue
     
     def talk_to_player(self,player_msg):
-        for sentence in self.dialouge:
+        for sentence in self.dialogue:
             if player_msg == sentence:
                 print(self.dialogue[sentence])
              
